@@ -33,9 +33,9 @@ from torch.autograd import Variable
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--input_img_h5', default='../script/data/vdl_img_vgg.h5', help='path to dataset, now hdf5 file')
-parser.add_argument('--input_ques_h5', default='../script/data/visdial_data.h5', help='path to dataset, now hdf5 file')
-parser.add_argument('--input_json', default='../script/data/visdial_params.json', help='path to dataset, now hdf5 file')
+parser.add_argument('--input_img_h5', default='../script/data/vdl_img_vgg_demo.h5', help='path to dataset, now hdf5 file')
+parser.add_argument('--input_ques_h5', default='../script/data/visdial_data_demo.h5', help='path to dataset, now hdf5 file')
+parser.add_argument('--input_json', default='../script/data/visdial_params_demo.json', help='path to dataset, now hdf5 file')
 parser.add_argument('--outf', default='./save', help='folder to output images and model checkpoints')
 parser.add_argument('--encoder', default='G_QIH_VGG', help='what encoder to use.')
 parser.add_argument('--model_path', default='', help='folder to output images and model checkpoints')
@@ -46,7 +46,7 @@ parser.add_argument('--start_epoch', type=int, default=0, help='start of epochs 
 parser.add_argument('--negative_sample', type=int, default=20, help='folder to output images and model checkpoints')
 parser.add_argument('--neg_batch_sample', type=int, default=30, help='folder to output images and model checkpoints')
 
-parser.add_argument('--workers', type=int, help='number of data loading workers', default=6)
+parser.add_argument('--workers', type=int, help='number of data loading workers', default=0)
 parser.add_argument('--batchSize', type=int, default=128, help='input batch size')
 parser.add_argument('--save_iter', type=int, default=2, help='number of epochs to train for')
 
